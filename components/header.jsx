@@ -8,13 +8,13 @@ export default function Header() {
     <header className="border-b border-border bg-background">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         {/* Site Title */}
-        <div className="text-xl font-bold tracking-tight">Lee Paulison Jr</div>
+        <a href='/#hero' className="text-xl font-bold tracking-tight">Lee Paulison Jr</a>
 
         {/* Desktop Nav */}
         <nav className="hidden sm:flex items-center gap-6 text-sm text-muted-foreground">
-          <a href="#about" className="hover:text-foreground">About</a>
-          <a href="#projects" className="hover:text-foreground">Projects</a>
-          <a href="#contact" className="hover:text-foreground">Contact</a>
+          <a href="/#about" className="hover:text-foreground">About</a>
+          <a href="/#projects" className="hover:text-foreground">Projects</a>
+          <a href="/contact" className="hover:text-foreground">Contact</a>
           <ThemeToggle />
         </nav>
 
