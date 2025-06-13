@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/components/themeProvider';
+import { Analytics } from '@vercel/analytics/next';
 // components
 import Header from '@/components/header';
 import Footer from '@/components/footer';
@@ -53,6 +54,7 @@ export default function RootLayout({ children }) {
             <Header />
             <main className='flex-grow overflow-y-auto'>{children}</main>
             <Footer />
+            <Analytics />
           </div>
         </ThemeProvider>
       </body>
