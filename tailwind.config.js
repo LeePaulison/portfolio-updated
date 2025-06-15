@@ -4,8 +4,9 @@ module.exports = {
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './content/**/*.{mdx}', // ensure your MDX content is scanned
   ],
-  darkMode: 'class', // 'class' strategy allows JS theme toggling
+  darkMode: 'class',
   theme: {
     extend: {
       borderRadius: {
@@ -47,9 +48,27 @@ module.exports = {
         input: 'oklch(var(--input) / <alpha-value>)',
         ring: 'oklch(var(--ring) / <alpha-value>)',
       },
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            color: theme('colors.foreground'),
+            a: { color: theme('colors.primary') },
+            h1: { fontWeight: '700', color: theme('colors.foreground') },
+            h2: { fontWeight: '600', color: theme('colors.foreground') },
+            h3: { fontWeight: '600', color: theme('colors.foreground') },
+            strong: { color: theme('colors.foreground') },
+            code: { color: theme('colors.foreground') },
+          },
+        },
+        invert: {
+          css: {
+            color: theme('colors.foreground'),
+            a: { color: theme('colors.primary') },
+            strong: { color: theme('colors.foreground') },
+          },
+        },
+      }),
     },
   },
-  plugins: [
-    // optional: typography, forms, line-clamp, etc.
-  ],
+  plugins: [require('@tailwindcss/typography')],
 };
