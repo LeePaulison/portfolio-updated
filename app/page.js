@@ -23,7 +23,7 @@ export default function Home() {
           crafting responsive, performant interfaces that scale.
         </p>
         <ul className='space-y-2 text-foreground list-disc list-inside mb-6'>
-          <li>3+ years experience in Front‑End Dev (HTML, CSS, JS, React)</li>
+          <li>4+ years experience in Front‑End Dev (HTML, CSS, JS, React, Next.JS)</li>
           <li>508a / WCAG accessibility compliance</li>
           <li>Performance-first and scalable UI solutions</li>
         </ul>
@@ -38,6 +38,10 @@ export default function Home() {
           Learn My Story
         </a>
       </section>
+      <section
+        id='contact'
+        className='max-w-4xl mx-auto px-4 sm:px-8 py-20 bg-background text-card-foreground'
+      ></section>
     </>
   );
 }
