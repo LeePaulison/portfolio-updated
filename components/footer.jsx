@@ -7,9 +7,9 @@ function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <div className="grid grid-cols-12 gap-4 pb-4 pt-2 sm:pt-4 sm:pb-6 border-t border-border">
+    <div className="container grid grid-cols-12 gap-4 pb-4 pt-2 sm:pt-4 sm:pb-6 border-t border-border">
       {/* Logo */}
-      <div className="col-span-3 flex flex-col items-center justify-center">
+      <div className="col-span-3 flex flex-col items-start justify-center">
         <img
           src="/assets/images/LP_Logo.webp"
           alt="Lee Paulison Jr's Logo"
@@ -54,7 +54,7 @@ function Footer() {
       </div>
 
       {/* Copyright */}
-      <div className="col-span-3 flex flex-col items-center justify-center text-sm text-muted-foreground">
+      <div className="col-span-3 flex flex-col items-end justify-center text-sm text-muted-foreground">
         <p>© {currentYear} Lee Paulison Jr</p>
         <p>All rights reserved.</p>
       </div>

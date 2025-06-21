@@ -50,9 +50,11 @@ export default function RootLayout({ children }) {
     <html lang='en' suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ThemeProvider attribute='class' defaultTheme='system' enableSystem disableTransitionOnChange>
-          <div className='flex flex-col mx-auto max-w-screen-lg h-screen px-4 sm:px-6 lg:px-8 overflow-x-hidden'>
+          <div className='flex flex-col h-screen overflow-x-hidden'>
             <Header />
-            <main className='flex-grow overflow-y-auto'>{children}</main>
+            <main className='flex-grow overflow-y-auto'>
+              <div className='container'>{children}</div>
+            </main>
             <Footer />
             <Analytics />
           </div>
