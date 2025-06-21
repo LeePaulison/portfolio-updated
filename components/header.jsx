@@ -8,7 +8,7 @@ export default function Header() {
     <header className="border-b border-border bg-background">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         {/* Site Title */}
-        <a href='/#hero' className="text-xl font-bold tracking-tight">Lee Paulison Jr</a>
+        <a href='/#hero' className="text-xl font-bold tracking-tight"><img src='assets/images/LP_Logo.webp' width='48px' height='auto' alt="Lee Paulison's Logo" aria-label="Lee Paulison's Logo"></img></a>
 
         {/* Desktop Nav */}
         <nav className="hidden sm:flex items-center gap-6 text-sm text-muted-foreground">

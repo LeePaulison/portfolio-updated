@@ -3,9 +3,10 @@ import { getMDXPage } from '@/lib/get-mdx-page';
 import { generateStaticParams as generate } from '@/lib/mdx-utils';
 
 export default async function ProjectPage({ params }) {
+  const { slug } = await params;
   const { content, frontmatter } = await getMDXPage({
     type: 'projects',
-    slug: params.slug,
+    slug: slug,
   });
 
   return (
