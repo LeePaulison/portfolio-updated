@@ -25,6 +25,7 @@ export default function Header() {
             <DropdownMenuTrigger asChild>
               <Button variant="outline" size="icon">
                 <Menu className="h-[1.2rem] w-[1.2rem]" />
+                <span className="sr-only">Navigation Menu</span>
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" sideOffset={8} className="w-40">
