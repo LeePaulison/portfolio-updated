@@ -7,7 +7,7 @@ function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <div className="container grid grid-cols-12 gap-4 pb-4 pt-2 sm:pt-4 sm:pb-6 border-t border-border">
+    <div className="container grid grid-cols-12 gap-4 pb-4 pt-2 sm:pt-4 sm:pb-6">
       {/* Logo */}
       <div className="col-span-3 flex flex-col items-start justify-center">
         <img

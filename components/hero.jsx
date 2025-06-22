@@ -2,7 +2,7 @@ export function HeroTeaser() {
   return (
     <section
       id='hero'
-      className='min-h-[70vh] flex flex-col items-center justify-center text-center px-4 sm:px-8 py-16 bg-background text-foreground'
+      className='min-h-[70vh] flex flex-col items-center justify-center text-center px-4 sm:px-8 py-16 bg-background text-foreground border-t border-border/60'
     >
       <h1 className='text-3xl sm:text-5xl font-bold tracking-tight'>Hi, I’m Lee — Front‑End Developer in Orlando</h1>
       <p className='mt-4 max-w-xl text-base sm:text-lg text-muted-foreground'>
