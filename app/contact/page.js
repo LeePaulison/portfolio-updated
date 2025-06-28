@@ -9,6 +9,7 @@ import { Label } from '@/components/ui/label';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { useRecaptcha } from '@/hooks/useRecaptcha';
+import emailjs from '@emailjs/browser';
 
 export default function ContactForm() {
   const router = useRouter();
@@ -81,22 +82,32 @@ export default function ContactForm() {
       // ✅ Call the recaptcha hook
       const recaptchaData = await executeRecaptcha('contact_form');
 
+      console.log('reCAPTCHA data:', recaptchaData);
+
       if (!recaptchaData) {
         setError('reCAPTCHA verification failed. Please try again.');
         setIsSubmitting(false);
         return;
       }
 
-      // ✅ Send your form data
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      });
+      if (recaptchaData.score < 0.5) {
+        setError('reCAPTCHA score was too low. Please try again.');
+        setIsSubmitting(false);
+        return;
+      }
 
-      const result = await res.json();
-      if (!result.success) {
-        throw new Error(result.error || 'Submission failed.');
+      // ✅ Send your form data
+      const res = await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        formData,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+      );
+
+      console.log('EmailJS response:', res);
+
+      if (res.status !== 200) {
+        throw new Error(res.text || 'Submission failed.');
       }
 
       resetForm();

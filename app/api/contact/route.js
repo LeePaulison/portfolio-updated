@@ -5,35 +5,31 @@ import emailjs from '@emailjs/nodejs';
 export async function POST(req) {
   try {
     const body = await req.json();
-    const { recaptcha, from_name, from_company, from_email, from_subject, message } = body;
 
-    // 1. Verify reCAPTCHA
-    const recaptchaSecret = process.env.RECAPTCHA_SECRET_KEY;
-    const recaptchaRes = await fetch('https://www.google.com/recaptcha/api/siteverify', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams({
-        secret: recaptchaSecret,
-        response: recaptcha,
-      }).toString(),
-    });
-
-    const recaptchaData = await recaptchaRes.json();
-
-    if (!recaptchaData.success || recaptchaData.score < 0.5) {
-      return new Response(JSON.stringify({ success: false, error: 'Failed reCAPTCHA', score: recaptchaData.score }), {
-        status: 403,
-      });
+    if (body.recaptchaScore < 0.5) {
+      return new Response(JSON.stringify({ success: false, error: 'Low reCAPTCHA score.' }), { status: 403 });
     }
 
+    console.log('Contact form submission:', body);
     // 2. Send email with EmailJS
     const templateParams = {
-      from_name,
-      from_company,
-      from_email,
-      from_subject,
-      message,
+      from_name: body.from_name,
+      from_company: body.from_company,
+      from_email: body.from_email,
+      from_subject: body.from_subject,
+      message: body.message,
     };
+
+    console.log('Sending email with template params:', templateParams);
+    if (
+      !process.env.EMAILJS_SERVICE_ID ||
+      !process.env.EMAILJS_TEMPLATE_ID ||
+      !process.env.EMAILJS_PUBLIC_KEY ||
+      !process.env.EMAILJS_PRIVATE_KEY
+    ) {
+      console.error('EmailJS environment variables are not set properly.');
+      return new Response(JSON.stringify({ success: false, error: 'EmailJS configuration error.' }), { status: 500 });
+    }
 
     const emailResponse = await emailjs.send(
       process.env.EMAILJS_SERVICE_ID,
