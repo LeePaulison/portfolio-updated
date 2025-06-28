@@ -10,8 +10,6 @@ export async function POST(req) {
 
     const secret = process.env.RECAPTCHA_SECRET_KEY;
 
-    console.log('Verifying reCAPTCHA with secret:', secret);
-
     const googleResponse = await fetch('https://www.google.com/recaptcha/api/siteverify', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -22,8 +20,6 @@ export async function POST(req) {
     });
 
     const data = await googleResponse.json();
-
-    console.log('reCAPTCHA verification response:', data);
 
     if (!data.success || data.score < 0.5) {
       return new Response(JSON.stringify({ success: false, score: data.score }), { status: 403 });

@@ -10,7 +10,6 @@ export async function POST(req) {
       return new Response(JSON.stringify({ success: false, error: 'Low reCAPTCHA score.' }), { status: 403 });
     }
 
-    console.log('Contact form submission:', body);
     // 2. Send email with EmailJS
     const templateParams = {
       from_name: body.from_name,
@@ -20,7 +19,6 @@ export async function POST(req) {
       message: body.message,
     };
 
-    console.log('Sending email with template params:', templateParams);
     if (
       !process.env.EMAILJS_SERVICE_ID ||
       !process.env.EMAILJS_TEMPLATE_ID ||

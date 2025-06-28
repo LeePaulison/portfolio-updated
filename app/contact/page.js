@@ -82,8 +82,6 @@ export default function ContactForm() {
       // ✅ Call the recaptcha hook
       const recaptchaData = await executeRecaptcha('contact_form');
 
-      console.log('reCAPTCHA data:', recaptchaData);
-
       if (!recaptchaData) {
         setError('reCAPTCHA verification failed. Please try again.');
         setIsSubmitting(false);
@@ -103,8 +101,6 @@ export default function ContactForm() {
         formData,
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
       );
-
-      console.log('EmailJS response:', res);
 
       if (res.status !== 200) {
         throw new Error(res.text || 'Submission failed.');

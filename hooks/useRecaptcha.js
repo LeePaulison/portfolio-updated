@@ -25,7 +25,6 @@ export function useRecaptcha() {
         return null;
       }
 
-      console.log('reCAPTCHA passed:', data.score);
       return data;
     } catch (error) {
       console.error('reCAPTCHA error:', error);
