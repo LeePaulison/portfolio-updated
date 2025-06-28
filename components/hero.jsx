@@ -14,6 +14,10 @@ export function HeroTeaser() {
       >
         See My Work
       </a>
+      <h2 className='mt-8 text-lg sm:text-xl font-semibold tracking-tight'>Please note that this site is a work in progress.</h2>
+      <p className='mt-2 text-sm sm:text-base text-muted-foreground'>
+        Some projects are still being updated, and I’m actively adding new content. Check back soon for more!
+      </p>
     </section>
 
   )
