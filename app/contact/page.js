@@ -8,9 +8,11 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { useRecaptcha } from '@/hooks/useRecaptcha';
 
 export default function ContactForm() {
   const router = useRouter();
+  const { executeRecaptcha } = useRecaptcha();
 
   const [formData, setFormData] = useState({
     from_name: '',
@@ -68,8 +70,7 @@ export default function ContactForm() {
     e.preventDefault();
     setError(null);
 
-    const grecaptcha = window.grecaptcha;
-    if (!grecaptcha || !sanitizeAndValidate()) {
+    if (!sanitizeAndValidate()) {
       setError('Validation failed. Please check your input.');
       return;
     }
@@ -77,14 +78,20 @@ export default function ContactForm() {
     setIsSubmitting(true);
 
     try {
-      const recaptchaToken = await grecaptcha.execute(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY, {
-        action: 'contact_form',
-      });
+      // ✅ Call the recaptcha hook
+      const recaptchaData = await executeRecaptcha('contact_form');
 
+      if (!recaptchaData) {
+        setError('reCAPTCHA verification failed. Please try again.');
+        setIsSubmitting(false);
+        return;
+      }
+
+      // ✅ Send your form data
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...formData, recaptcha: recaptchaToken }),
+        body: JSON.stringify(formData),
       });
 
       const result = await res.json();
@@ -101,7 +108,6 @@ export default function ContactForm() {
       setIsSubmitting(false);
     }
   };
-
   return (
     <div className='max-w-xl mx-auto py-16 px-4 sm:px-6 lg:px-8'>
       <h1 className='text-3xl font-bold mb-8'>Contact Me</h1>

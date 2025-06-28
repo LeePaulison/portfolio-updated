@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/components/themeProvider';
 import { Analytics } from '@vercel/analytics/next';
+import Script from 'next/script';
 // components
 import Header from '@/components/header';
 import Footer from '@/components/footer';
@@ -49,6 +50,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en' suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <Script
+          src={`https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}
+          strategy='afterInteractive'
+        />
+
         <ThemeProvider attribute='class' defaultTheme='system' enableSystem disableTransitionOnChange>
           <div className='flex flex-col h-screen overflow-x-hidden'>
             <Header />
