@@ -2,6 +2,8 @@ import React from 'react'
 // Simple Icons
 import { SiLinkedin } from "react-icons/si";
 import { SiGithub } from "react-icons/si";
+import Image from "next/image";
+
 function Footer() {
 
   const currentYear = new Date().getFullYear();
@@ -10,10 +12,12 @@ function Footer() {
     <div className="container grid grid-cols-12 gap-4 pb-4 pt-2 sm:pt-4 sm:pb-6">
       {/* Logo */}
       <div className="col-span-3 flex flex-col items-start justify-center">
-        <img
+        <Image
           src="/assets/images/LP_Logo.webp"
-          alt="Lee Paulison Jr's Logo"
-          className="h-15 w-auto"
+          alt="Lee Paulison's Logo"
+          width={60}
+          height={60}
+          priority
         />
       </div>
 

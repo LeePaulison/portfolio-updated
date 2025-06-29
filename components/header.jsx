@@ -2,13 +2,23 @@ import { Menu } from 'lucide-react';
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from '@/components/ui/dropdown-menu';
 import { Button } from '@/components/ui/button';
 import ThemeToggle from '@/components/themeToggle'; // If not default exported, use named import
+import Image from "next/image";
+
 
 export default function Header() {
   return (
     <header className="bg-background container">
       <div className="mx-auto flex max-w-7xl items-center justify-between py-4">
         {/* Site Title */}
-        <a href='/#hero' className="text-xl font-bold tracking-tight"><img src='/assets/images/LP_Logo.webp' width='48px' height='auto' alt="Lee Paulison's Logo" aria-label="Lee Paulison's Logo"></img></a>
+        <a href='/#hero' className="text-xl font-bold tracking-tight">
+          <Image
+            src="/assets/images/LP_Logo.webp"
+            alt="Lee Paulison's Logo"
+            width={48}
+            height={48}
+            priority
+          />
+        </a>
 
         {/* Desktop Nav */}
         <nav className="hidden sm:flex items-center gap-6 text-sm text-muted-foreground">
