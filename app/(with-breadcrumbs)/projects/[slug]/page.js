@@ -4,9 +4,11 @@ import { MDXRemote } from 'next-mdx-remote/rsc';
 import { MDXComponents } from '@/components/mdxComponents';
 
 export default async function ProjectPage({ params }) {
+  const { slug } = await params;
+
   const { frontmatter, content } = await getMDXPage({
     type: 'projects',
-    slug: params.slug,
+    slug,
   });
 
   const pageTitle =
