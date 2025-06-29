@@ -1,6 +1,8 @@
 // NOTE: Contact form with updated validation including HTML tag filtering across all fields
 'use client';
 
+import React from 'react';
+import { useBreadcrumbs } from '@/app/breadcrumbs-context';
 import { useState, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { Input } from '@/components/ui/input';
@@ -14,6 +16,13 @@ import emailjs from '@emailjs/browser';
 export default function ContactForm() {
   const router = useRouter();
   const { executeRecaptcha } = useRecaptcha();
+
+  const { setBreadcrumbs } = useBreadcrumbs();
+
+  // Set breadcrumbs for this page
+  React.useEffect(() => {
+    setBreadcrumbs([{ label: 'Home', href: '/' }, { label: 'Contact' }]);
+  }, [setBreadcrumbs]);
 
   const [formData, setFormData] = useState({
     from_name: '',

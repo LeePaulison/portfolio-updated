@@ -1,4 +1,16 @@
+'use client';
+
+import React from 'react';
+import { useBreadcrumbs } from '@/app/breadcrumbs-context';
+
 export default function AboutPage() {
+  const { setBreadcrumbs } = useBreadcrumbs();
+
+  // Set breadcrumbs for this page
+  React.useEffect(() => {
+    setBreadcrumbs([{ label: 'Home', href: '/' }, { label: 'About' }]);
+  }, [setBreadcrumbs]);
+
   return (
     <section className='max-w-4xl mx-auto px-4 sm:px-8 py-20 bg-background text-foreground'>
       <h1 className='text-3xl sm:text-4xl font-bold mb-6'>About Me</h1>
