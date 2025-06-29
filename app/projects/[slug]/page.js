@@ -1,6 +1,6 @@
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import { getMDXPage } from '@/lib/get-mdx-page';
-import { generateStaticParams as generate } from '@/lib/mdx-utils';
+import { generateStaticParams as generate } from './get-all-frontmatters.js';
 import { MDXComponents } from '@/components/mdxComponents';
 
 export default async function ProjectPage({ params }) {
