@@ -48,7 +48,7 @@ export function Project({ project }) {
             {/* Title linked directly */}
             <Link
               href={`/projects/${project.slug}`}
-              className="text-2xl font-bold text-primary hover:underline mb-1 block"
+              className="text-2xl font-bold text-primary hover:underline mb-1 inline-block"
             >
               {project.title}
             </Link>

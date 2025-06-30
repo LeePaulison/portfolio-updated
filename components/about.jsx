@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export function AboutTeaser() {
   return (
-    <section id='about' className='bg-muted/40 py-16  border-t border-border/60'>
+    <section id='about' className='bg-muted/40 py-16  border-x border-border/60'>
       <div className="container mx-auto max-w-2xl">
         <Card className='bg-background shadow-md'>
           <CardContent className='py-8 px-6'>

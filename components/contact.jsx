@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export function ContactTeaser() {
   return (
-    <section id='contact' className="bg-muted/40 py-16 border-y border-border/60">
+    <section id='contact' className="bg-muted/40 py-16 border-b border-x border-border/60">
       <div className="container mx-auto max-w-2xl text-center">
         <Card className="bg-card text-card-foreground ">
           <CardContent className="py-8 px-6">

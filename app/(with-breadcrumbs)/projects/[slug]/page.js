@@ -28,9 +28,9 @@ export default async function ProjectPage({ params }) {
     <div>
       {/* Inject the client breadcrumb setter */}
       <SetBreadcrumbs items={breadcrumbItems} />
-
-      <h1 className='text-4xl font-bold mb-6'>{pageTitle}</h1>
-      <MDXRemote source={content} components={MDXComponents} />
+      <article className='prose dark:prose-invert'>
+        <MDXRemote source={content} components={MDXComponents} />
+      </article>
     </div>
   );
 }
