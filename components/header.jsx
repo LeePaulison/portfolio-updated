@@ -3,6 +3,7 @@ import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuIte
 import { Button } from '@/components/ui/button';
 import ThemeToggle from '@/components/themeToggle'; // If not default exported, use named import
 import Image from "next/image";
+import Link from 'next/link';
 
 
 export default function Header() {
@@ -22,9 +23,10 @@ export default function Header() {
 
         {/* Desktop Nav */}
         <nav className="hidden sm:flex items-center gap-6 text-sm text-muted-foreground">
-          <a href="/#projects" className="hover:text-foreground">Projects</a>
-          <a href="/#about" className="hover:text-foreground">About</a>
-          <a href="/#contact" className="hover:text-foreground">Contact</a>
+          <Link href="/#hero" className="hover:text-foreground">Home</Link>
+          <Link href="/#projects" className="hover:text-foreground">Projects</Link>
+          <Link href="/#about" className="hover:text-foreground">About</Link>
+          <Link href="/#contact" className="hover:text-foreground">Contact</Link>
           <ThemeToggle />
         </nav>
 
@@ -40,13 +42,13 @@ export default function Header() {
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" sideOffset={8} className="w-40">
               <DropdownMenuItem asChild>
-                <a href="#about">About</a>
+                <Link href="#about">About</Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <a href="#projects">Projects</a>
+                <Link href="#projects">Projects</Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <a href="#contact">Contact</a>
+                <Link href="#contact">Contact</Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>

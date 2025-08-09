@@ -129,7 +129,9 @@ export default function ContactForm() {
       <h1 className='text-3xl font-bold mb-8'>Contact Me</h1>
       <form onSubmit={handleSubmit} className='space-y-6'>
         <div>
-          <Label htmlFor='from_name'>Name *</Label>
+          <Label htmlFor='from_name' className='mb-1'>
+            Name *
+          </Label>
           <Input
             id='from_name'
             name='from_name'
@@ -140,7 +142,9 @@ export default function ContactForm() {
           {errors.from_name && <p className='text-sm text-destructive mt-1'>{errors.from_name}</p>}
         </div>
         <div>
-          <Label htmlFor='from_company'>Company</Label>
+          <Label htmlFor='from_company' className='mb-1'>
+            Company
+          </Label>
           <Input
             id='from_company'
             name='from_company'
@@ -151,7 +155,9 @@ export default function ContactForm() {
           {errors.from_company && <p className='text-sm text-destructive mt-1'>{errors.from_company}</p>}
         </div>
         <div>
-          <Label htmlFor='from_email'>Email *</Label>
+          <Label htmlFor='from_email' className='mb-1'>
+            Email *
+          </Label>
           <Input
             id='from_email'
             type='email'
@@ -163,7 +169,9 @@ export default function ContactForm() {
           {errors.from_email && <p className='text-sm text-destructive mt-1'>{errors.from_email}</p>}
         </div>
         <div>
-          <Label htmlFor='from_subject'>Subject *</Label>
+          <Label htmlFor='from_subject' className='mb-1'>
+            Subject *
+          </Label>
           <Input
             id='from_subject'
             name='from_subject'
@@ -174,7 +182,9 @@ export default function ContactForm() {
           {errors.from_subject && <p className='text-sm text-destructive mt-1'>{errors.from_subject}</p>}
         </div>
         <div>
-          <Label htmlFor='message'>Message *</Label>
+          <Label htmlFor='message' className='mb-1'>
+            Message *
+          </Label>
           <Textarea
             id='message'
             name='message'
