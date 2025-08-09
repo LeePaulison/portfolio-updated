@@ -1,15 +1,14 @@
-import React from 'react'
 // Simple Icons
 import { SiLinkedin } from "react-icons/si";
 import { SiGithub } from "react-icons/si";
 import Image from "next/image";
 
-function Footer() {
+export default function Footer() {
 
   const currentYear = new Date().getFullYear();
 
   return (
-    <div className="container grid grid-cols-12 gap-4 pb-4 pt-2 sm:pt-4 sm:pb-6">
+    <footer className="container grid grid-cols-12 gap-4 pb-4 pt-2 sm:pt-4 sm:pb-6">
       {/* Logo */}
       <div className="col-span-3 flex flex-col items-start justify-center">
         <Image
@@ -47,10 +46,10 @@ function Footer() {
           <div className="hidden sm:flex flex-wrap justify-center gap-x-4 gap-y-1 text-sm text-muted-foreground text-center max-w-xl mx-auto pe-2">
             <span>Next.js</span>
             <span>Tailwind CSS</span>
+            <span>ShadCN</span>
             <span>Radix UI</span>
             <span>React Icons</span>
             <span>App Router</span>
-            <span>MDX</span>
             <span>SSR</span>
             <span>Deployed via Vercel</span>
           </div>
@@ -62,8 +61,7 @@ function Footer() {
         <p>© {currentYear} Lee Paulison Jr</p>
         <p>All rights reserved.</p>
       </div>
-    </div>
+    </footer>
   )
 }
 
-export default Footer

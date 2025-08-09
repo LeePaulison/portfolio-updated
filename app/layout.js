@@ -56,10 +56,10 @@ export default function RootLayout({ children }) {
         />
 
         <ThemeProvider attribute='class' defaultTheme='system' enableSystem disableTransitionOnChange>
-          <div className='flex flex-col h-screen overflow-x-hidden'>
+          <div className='flex flex-col h-screen overflow-hidden'>
             <Header />
             <main className='flex-grow overflow-y-auto'>
-              <div className='container'>{children}</div>
+              <section className='container'>{children}</section>
             </main>
             <Footer />
             <Analytics />
