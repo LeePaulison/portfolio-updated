@@ -70,5 +70,14 @@ module.exports = {
       }),
     },
   },
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [
+    require('@tailwindcss/typography'),
+    ({ addUtilities }) => {
+      addUtilities({
+        '.scrollbar-gutter-stable': {
+          'scrollbar-gutter': 'stable both-edges',
+        },
+      });
+    },
+  ],
 };

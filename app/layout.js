@@ -6,6 +6,7 @@ import Script from 'next/script';
 // components
 import Header from '@/components/header';
 import Footer from '@/components/footer';
+import { IntermediatePage } from '@/components/intermediatePage';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -58,9 +59,7 @@ export default function RootLayout({ children }) {
         <ThemeProvider attribute='class' defaultTheme='system' enableSystem disableTransitionOnChange>
           <div className='flex flex-col h-screen overflow-hidden'>
             <Header />
-            <main className='flex-grow overflow-y-auto'>
-              <section className='container'>{children}</section>
-            </main>
+            <IntermediatePage>{children}</IntermediatePage>
             <Footer />
             <Analytics />
           </div>
