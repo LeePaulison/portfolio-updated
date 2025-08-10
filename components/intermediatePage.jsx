@@ -1,6 +1,6 @@
 'use client'
 import React from 'react';
-import AnimatedThumb from "./animatedThumb";
+import AnimatedProgressRail from './animatedProgressRail';
 
 export const IntermediatePage = ({ children }) => {
   const mainRef = React.useRef(null);
@@ -9,8 +9,7 @@ export const IntermediatePage = ({ children }) => {
       <main className='flex-grow overflow-y-auto' ref={mainRef}>
         <section className='container'>{children}</section>
       </main>
-      <AnimatedThumb containerRef={mainRef} />
+      <AnimatedProgressRail containerRef={mainRef} />
     </div>
   );
 };
-
