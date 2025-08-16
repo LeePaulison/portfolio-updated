@@ -22,6 +22,7 @@ export const metadata = {
   title: 'Portfolio | Lee Paulison Jr',
   keywords: ['Lee Paulison Jr', 'Portfolio', 'Web Developer', 'Software Engineer'],
   authors: [{ name: 'Lee Paulison Jr', url: 'https://leejpaulisonjr.com' }],
+  description: 'Portfolio of Lee Paulison Jr, a web developer and software engineer.',
   creator: 'Lee Paulison Jr',
   openGraph: {
     title: 'Portfolio | Lee Paulison Jr',
