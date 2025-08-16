@@ -9,7 +9,7 @@ export const IntermediatePage = ({ children }) => {
       <main className='flex-grow overflow-y-auto' ref={mainRef}>
         <section className='container'>{children}</section>
       </main>
-      <AnimatedProgressRail containerRef={mainRef} />
+      {/* <AnimatedProgressRail containerRef={mainRef} /> */}
     </div>
   );
 };

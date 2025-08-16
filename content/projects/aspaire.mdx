@@ -1,0 +1,96 @@
+---
+id: aspaire
+title: AspAIre
+description: An AI-powered job search assistant that combines resume parsing, smart job matching, and AI-driven insights to help users land their next role faster.
+date: 2025-08-16
+status: In Progress
+technologies:
+  - Next.js
+  - GraphQL
+  - PostgreSQL
+  - MongoDB
+  - Tailwind CSS
+  - ShadCN
+  - NextAuth
+  - OpenAI (GPT-4o)
+  - TanStack Query (WIP)
+media:
+  url: aspaire
+  alt: Screenshot of AspAIre interface
+links:
+  - type: GitHub
+    url: https://github.com/LeePaulison/aspaire
+---
+
+<ProjectHero title='AspAIre' subtitle='Your AI-powered career and job search assistant.'>
+  <Overview>
+    <strong>AspAIre</strong> reduces job-hunting fatigue by unifying job discovery, resume-aware matching, and
+    AI-assisted application materials. It aggregates listings (Remotive + SerpAPI), parses your resume to surface
+    relevant roles, suggests better search terms, and drafts tailored cover letters while supporting mock interview prep
+    with streaming AI.
+  </Overview>
+</ProjectHero>
+
+## My Role
+
+- <strong>Architecture:</strong> designed layered backend with DAL/abstraction/business split
+- <strong>GraphQL:</strong> authored schema/resolvers (users, preferences, resumes, job listings, AI settings, AI history)
+- <strong>AI integration:</strong> summaries, cover letters, and interview chat (with streaming) wired to OpenAI
+- <strong>Ingestion:</strong> job fetch + dedup pipeline; scheduling for API limits
+- <strong>Frontend:</strong> Profile, Settings, Resume flows with shadcn/ui; accessibility-first patterns
+- <strong>Ops:</strong> Vercel deploys, CI/CD via GitHub Actions, monitoring with Sentry
+
+### Challenges
+
+- <strong>API limits:</strong> query rotation and nightly runs to respect free-tier constraints
+- <strong>Dedup logic:</strong> prioritizing canonical sources (e.g., Remotive) over overlaps
+- <strong>Data split:</strong> relational (Postgres) vs. conversational/raw (MongoDB)
+- <strong>Accessibility:</strong> ensuring forms, dialogs align with WCAG/508a
+
+## Features
+
+- Aggregated & deduplicated job feed from Remotive and SerpAPI
+- Resume parsing to extract skills, titles, and industries for smarter matching
+- AI-suggested search terms (alternative titles, related skills, locales)
+- Tailored cover letter generation per job/company
+- Interview prep via streaming AI with saved conversation history
+- Application tracking across Saved → Applied → Interviewing → Offer
+- Daily query sets and graceful handling of API limits
+
+<TwoColumn>
+  <TechStack>
+    ## Tech Stack
+    - Next.js 15+ and Tailwind CSS  
+    - ShadCN + Radix UI components  
+    - Zustand (local), TanStack Query (remote data caching, WIP)  
+    - Yoga GraphQL backend with NextAuth (GitHub OAuth)  
+    - PostgreSQL (users, preferences, resumes, job listings, AI settings)  
+    - MongoDB (AI history, raw job payloads)  
+    - OpenAI GPT-4o (summaries, cover letters, interview chat)  
+    - Vercel (hosting/cron), GitHub Actions (CI/CD), Sentry (monitoring)  
+  </TechStack>
+
+  <ProjectImage
+    src="/assets/images/aspaire.png"
+    alt="Screenshot of AspAIre interface"
+  />
+</TwoColumn>
+
+## Outcome & Next
+
+Even as a WIP, AspAIre already <strong>reduces time-to-insight</strong> and <strong>improves application quality</strong> with AI-assisted materials and smarter searches.
+
+- <strong>Near-term:</strong> complete UI polish for Settings/Resume; expand market insights
+- <strong>Performance:</strong> integrate <em>TanStack Query</em> for remote caching and optimistic UX
+- <strong>Phase-2:</strong> recruiter dashboards; LinkedIn/Indeed integrations; multi-user SaaS
+
+## Goals
+
+- Streamline job search with personalized discovery and AI-assisted applications
+- Finish Phase-1 UI polish for Settings/Resume and expand market insights
+- Integrate TanStack Query for robust remote caching and optimistic UX
+- Prepare Phase-2 integrations (recruiter dashboards, LinkedIn/Indeed, multi-user SaaS)
+
+<CTA>
+  <CTA.Link href='https://github.com/LeePaulison/aspaire'>GitHub</CTA.Link>
+</CTA>
