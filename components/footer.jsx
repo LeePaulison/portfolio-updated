@@ -28,14 +28,14 @@ export default function Footer() {
           className="hover:text-accent transition"
           aria-label='GitHub Profile'
         >
-          <SiGithub className="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px] md:w-[24px] md:h-[24px]" />
+          <SiGithub className="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px] md:w-[24px] md:h-[24px]" aria-label="GitHub Icon" />
         </a>
         <a
           href="https://www.linkedin.com/in/lee-paulison-jr/"
           className="hover:text-accent transition"
           aria-label='LinkedIn Profile'
         >
-          <SiLinkedin className="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px] md:w-[24px] md:h-[24px]" />
+          <SiLinkedin className="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px] md:w-[24px] md:h-[24px]" aria-label="LinkedIn Icon" />
         </a>
 
         {/* Tech Stack */}
