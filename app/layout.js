@@ -22,16 +22,16 @@ export const metadata = {
   title: 'Portfolio | Lee Paulison Jr',
   description: 'Portfolio of Lee Paulison Jr, a web developer and software engineer.',
   keywords: ['Lee Paulison Jr', 'Portfolio', 'Web Developer', 'Software Engineer'],
-  authors: [{ name: 'Lee Paulison Jr', url: 'https://www.leejpaulisonjr.com' }],
+  authors: [{ name: 'Lee Paulison Jr', url: 'https://www.leepaulisonjr.com' }],
   creator: 'Lee Paulison Jr',
   openGraph: {
     title: 'Portfolio | Lee Paulison Jr',
     description: 'Portfolio of Lee Paulison Jr, a web developer and software engineer.',
-    url: 'https://www.leejpaulisonjr.com',
+    url: 'https://www.leepaulisonjr.com',
     siteName: 'Lee Paulison Jr Portfolio',
     images: [
       {
-        url: 'https://www.leejpaulisonjr.com/og-image.png',
+        url: 'https://www.leepaulisonjr.com/og-image.png',
         width: 1200,
         height: 630,
         alt: 'Lee Paulison Jr Portfolio',
@@ -44,7 +44,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Portfolio | Lee Paulison Jr',
     description: 'Portfolio of Lee Paulison Jr, a web developer and software engineer.',
-    images: ['https://www.leejpaulisonjr.com/og-image.png'],
+    images: ['https://www.leepaulisonjr.com/og-image.png'],
   },
   icons: {
     icon: '/favicon.ico',
