@@ -31,7 +31,7 @@ export const metadata = {
     siteName: 'Lee Paulison Jr Portfolio',
     images: [
       {
-        url: 'https://leejpaulisonjr.com/og-image.png',
+        url: 'https://www.leejpaulisonjr.com/og-image.png',
         width: 1200,
         height: 630,
         alt: 'Lee Paulison Jr Portfolio',

@@ -27,7 +27,7 @@ export function Project({ project }) {
   }
 
   return (
-    <div className="mx-auto will-change-transform hover:scale-[1.01] transition-transform ease-[cubic-bezier(0.4,0,0.2,1)]
+    <li className="mx-auto will-change-transform hover:scale-[1.01] transition-transform ease-[cubic-bezier(0.4,0,0.2,1)]
  duration-300">
       <Card className="bg-card shadow-sm transition hover:shadow-md">
         <CardContent className="flex flex-col md:flex-row gap-6 items-start p-6">
@@ -106,7 +106,7 @@ export function Project({ project }) {
           )}
         </CardContent>
       </Card>
-    </div>
+    </li>
   );
 }
 

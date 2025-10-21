@@ -44,7 +44,8 @@ export default function AboutPage() {
       </p>
 
       <a
-        href='/resume.pdf'
+        href='/assets/resumes/Lee-Paulison-front-end-Resume-2025-10.pdf'
+        download
         className='inline-block mt-4 px-5 py-2 text-sm font-medium rounded-xl border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2'
       >
         Download Résumé
