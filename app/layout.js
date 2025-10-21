@@ -27,7 +27,7 @@ export const metadata = {
   openGraph: {
     title: 'Portfolio | Lee Paulison Jr',
     description: 'Portfolio of Lee Paulison Jr, a web developer and software engineer.',
-    url: 'https://leejpaulisonjr.com',
+    url: 'https://www.leejpaulisonjr.com',
     siteName: 'Lee Paulison Jr Portfolio',
     images: [
       {
@@ -40,7 +40,6 @@ export const metadata = {
     locale: 'en_US',
     type: 'website',
   },
-  description: 'Portfolio of Lee Paulison Jr, a web developer and software engineer.',
   icons: {
     icon: '/favicon.ico',
     apple: '/apple-touch-icon.png',
