@@ -20,9 +20,9 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: 'Portfolio | Lee Paulison Jr',
-  keywords: ['Lee Paulison Jr', 'Portfolio', 'Web Developer', 'Software Engineer'],
-  authors: [{ name: 'Lee Paulison Jr', url: 'https://leejpaulisonjr.com' }],
   description: 'Portfolio of Lee Paulison Jr, a web developer and software engineer.',
+  keywords: ['Lee Paulison Jr', 'Portfolio', 'Web Developer', 'Software Engineer'],
+  authors: [{ name: 'Lee Paulison Jr', url: 'https://www.leejpaulisonjr.com' }],
   creator: 'Lee Paulison Jr',
   openGraph: {
     title: 'Portfolio | Lee Paulison Jr',
@@ -39,6 +39,12 @@ export const metadata = {
     ],
     locale: 'en_US',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Portfolio | Lee Paulison Jr',
+    description: 'Portfolio of Lee Paulison Jr, a web developer and software engineer.',
+    images: ['https://www.leejpaulisonjr.com/og-image.png'],
   },
   icons: {
     icon: '/favicon.ico',
