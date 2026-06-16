@@ -1,10 +1,9 @@
-// Simple Icons
-import { SiLinkedin } from "react-icons/si";
-import { SiGithub } from "react-icons/si";
+// Font Awesome
+import { FaLinkedin } from "react-icons/fa6";
+import { FaGithubSquare } from "react-icons/fa";
 import Image from "next/image";
 
 export default function Footer() {
-
   const currentYear = new Date().getFullYear();
 
   return (
@@ -26,16 +25,22 @@ export default function Footer() {
         <a
           href="https://github.com/LeePaulison"
           className="hover:text-accent transition"
-          aria-label='GitHub Profile'
+          aria-label="GitHub Profile"
         >
-          <SiGithub className="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px] md:w-[24px] md:h-[24px]" aria-label="GitHub Icon" />
+          <FaGithubSquare
+            className="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px] md:w-[24px] md:h-[24px]"
+            aria-label="GitHub Icon"
+          />
         </a>
         <a
           href="https://www.linkedin.com/in/lee-paulison-jr/"
           className="hover:text-accent transition"
-          aria-label='LinkedIn Profile'
+          aria-label="LinkedIn Profile"
         >
-          <SiLinkedin className="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px] md:w-[24px] md:h-[24px]" aria-label="LinkedIn Icon" />
+          <FaLinkedin
+            className="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px] md:w-[24px] md:h-[24px]"
+            aria-label="LinkedIn Icon"
+          />
         </a>
 
         {/* Tech Stack */}
@@ -62,6 +67,5 @@ export default function Footer() {
         <p>All rights reserved.</p>
       </div>
     </footer>
-  )
+  );
 }
-
