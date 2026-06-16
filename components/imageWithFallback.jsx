@@ -1,18 +1,25 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import React, { useState } from "react";
+import PropTypes from "prop-types";
 
 export default function ImageWithFallback({ src, alt, ...props }) {
   const [imgSrc, setImgSrc] = useState(src);
 
   return (
-    <img
-      src={imgSrc}
-      alt={alt}
-      onError={() => setImgSrc('/assets/images/placeholder-image.png')}
-      {...props}
-    />
+    <a
+      href={imgSrc}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block cursor-zoom-in"
+    >
+      <img
+        src={imgSrc}
+        alt={alt}
+        onError={() => setImgSrc("/assets/images/placeholder-image.png")}
+        {...props}
+      />
+    </a>
   );
 }
 

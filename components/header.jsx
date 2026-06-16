@@ -1,18 +1,25 @@
-import { Menu } from 'lucide-react';
-import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from '@/components/ui/dropdown-menu';
-import { Button } from '@/components/ui/button';
-import ThemeToggle from '@/components/themeToggle'; // If not default exported, use named import
-import Image from "next/image";
-import Link from 'next/link';
+"use client";
 
+import { Menu } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+} from "@/components/ui/dropdown-menu";
+import { Button } from "@/components/ui/button";
+import ThemeToggle from "@/components/themeToggle"; // If not default exported, use named import
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Header() {
   return (
     <header className="bg-background container">
       <div className="mx-auto flex max-w-7xl items-center justify-between py-4">
         {/* Site Title */}
-        <a href='/#hero' className="text-xl font-bold tracking-tight">
+        <a href="/#hero" className="text-xl font-bold tracking-tight">
           <Image
+            id="logo"
             src="/assets/images/LP_Logo.webp"
             alt="Lee Paulison's Logo"
             width={48}
@@ -23,10 +30,18 @@ export default function Header() {
 
         {/* Desktop Nav */}
         <nav className="hidden sm:flex items-center gap-6 text-sm text-muted-foreground">
-          <Link href="/#hero" className="hover:text-foreground">Home</Link>
-          <Link href="/#projects" className="hover:text-foreground">Projects</Link>
-          <Link href="/#about" className="hover:text-foreground">About</Link>
-          <Link href="/#contact" className="hover:text-foreground">Contact</Link>
+          <Link href="/#hero" className="hover:text-foreground">
+            Home
+          </Link>
+          <Link href="/#projects" className="hover:text-foreground">
+            Projects
+          </Link>
+          <Link href="/#about" className="hover:text-foreground">
+            About
+          </Link>
+          <Link href="/#contact" className="hover:text-foreground">
+            Contact
+          </Link>
           <ThemeToggle />
         </nav>
 

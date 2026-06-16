@@ -7,6 +7,7 @@ import Link from "next/link";
 import ImageWithFallback from "./imageWithFallback";
 
 export function Project({ project }) {
+  console.log("Project page -- project: ", project);
   const imgSrc = project.media?.url
     ? `/assets/images/${project.media.url}.png`
     : null;
@@ -27,8 +28,10 @@ export function Project({ project }) {
   }
 
   return (
-    <li className="mx-auto will-change-transform hover:scale-[1.01] transition-transform ease-[cubic-bezier(0.4,0,0.2,1)]
- duration-300">
+    <li
+      className="mx-auto will-change-transform hover:scale-[1.01] transition-transform ease-[cubic-bezier(0.4,0,0.2,1)]
+ duration-300"
+    >
       <Card className="bg-card shadow-sm transition hover:shadow-md">
         <CardContent className="flex flex-col md:flex-row gap-6 items-start p-6">
           <div className="flex-1">
@@ -53,21 +56,15 @@ export function Project({ project }) {
               {project.title}
             </Link>
 
-            <p className="text-muted-foreground mb-3">
-              {project.description}
-            </p>
+            <p className="text-muted-foreground mb-3">{project.description}</p>
 
             <div className="mb-3">
-              <span className="font-medium text-primary">
-                Technologies:
-              </span>
+              <span className="font-medium text-primary">Technologies:</span>
               {project.technologies.map((tech, idx) => (
-                <span
-                  key={tech}
-                  className="text-sm text-muted-foreground"
-                >
-                  {` ${tech}${idx < project.technologies.length - 1 ? " |" : ""
-                    }`}
+                <span key={tech} className="text-sm text-muted-foreground">
+                  {` ${tech}${
+                    idx < project.technologies.length - 1 ? " |" : ""
+                  }`}
                 </span>
               ))}
             </div>
@@ -79,15 +76,9 @@ export function Project({ project }) {
               </div>
             )}
 
-            {/* ✅ Bonus: View Project button */}
-            <Button
-              asChild
-              variant="outline"
-              className="mt-2 text-sm"
-            >
-              <Link href={`/projects/${project.slug}`}>
-                View Project →
-              </Link>
+            {/* View Project button */}
+            <Button asChild variant="outline" className="mt-2 text-sm">
+              <Link href={`/projects/${project.slug}`}>View Project →</Link>
             </Button>
           </div>
 
