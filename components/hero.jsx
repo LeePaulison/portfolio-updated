@@ -1,24 +1,32 @@
 export function HeroTeaser() {
   return (
     <section
-      id='hero'
-      className='min-h-[70vh] flex flex-col items-center justify-center text-center px-4 sm:px-8 py-16 bg-background text-foreground border-t border-border/60'
+      id="hero"
+      className="min-h-[50vh] flex flex-col items-center justify-center gap-8 text-center px-4 sm:px-8 py-16 bg-background text-foreground border-t border-border/60"
     >
-      <h1 className='text-3xl sm:text-5xl font-bold tracking-tight'>Hi, I’m Lee — Front‑End Developer in Orlando</h1>
-      <p className='mt-4 max-w-xl text-base sm:text-lg text-muted-foreground'>
-        I build pixel‑perfect, accessible web experiences with React, Next.JS, Tailwind, and 508a compliance.
+      <h1 className="text-3xl sm:text-5xl font-bold tracking-tight">
+        Front-End Developer Building Accessible Enterprise Web Applications
+      </h1>
+      <p className="max-w-xl text-base sm:text-lg text-muted-foreground">
+        Nearly five years of experience building React applications for
+        enterprise training programs, with a focus on accessibility,
+        multilingual user experiences, and content management systems.{" "}
       </p>
-      <a
-        href='#projects'
-        className='mt-6 inline-block px-6 py-3 text-sm font-medium rounded-xl bg-primary text-primary-foreground hover:brightness-110 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2'
-      >
-        See My Work
-      </a>
-      <h2 className='mt-8 text-lg sm:text-xl font-semibold tracking-tight'>Please note that this site is a work in progress.</h2>
-      <p className='mt-2 text-sm sm:text-base text-muted-foreground'>
-        Some projects are still being updated, and I’m actively adding new content. Check back soon for more!
-      </p>
+      <div className="flex gap-4">
+        <a
+          href="#projects"
+          className="inline-flex items-center rounded-lg bg-primary px-6 py-3 font-medium text-primary-foreground transition hover:bg-accent"
+        >
+          See My Work
+        </a>
+        <a
+          href="./assets/resumes/Lee_Paulison_Front_End_Developer_Resume.pdf"
+          download
+          className="inline-flex items-center rounded-lg bg-primary px-6 py-3 font-medium text-primary-foreground transition hover:bg-accent"
+        >
+          Download Resume
+        </a>
+      </div>
     </section>
-
-  )
+  );
 }
