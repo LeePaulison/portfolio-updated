@@ -7,7 +7,6 @@ import Link from "next/link";
 import ImageWithFallback from "./imageWithFallback";
 
 export function Project({ project }) {
-  console.log("Project page -- project: ", project);
   const imgSrc = project.media?.url
     ? `/assets/images/${project.media.url}.png`
     : null;
