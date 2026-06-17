@@ -12,18 +12,21 @@ export function Project({ project }) {
     : null;
 
   function displayLinks(arr) {
-    return arr.map((link) => (
-      <Button
-        key={crypto.randomUUID()}
-        asChild
-        variant="secondary"
-        className="text-sm"
-      >
-        <a href={link.url} target="_blank" rel="noreferrer">
-          {link.type}
-        </a>
-      </Button>
-    ));
+    return arr.map((link) => {
+      if (link.type === "Ignore") return null;
+      return (
+        <Button
+          key={crypto.randomUUID()}
+          asChild
+          variant="secondary"
+          className="text-sm"
+        >
+          <a href={link.url} target="_blank" rel="noreferrer">
+            {link.type}
+          </a>
+        </Button>
+      );
+    });
   }
 
   return (
@@ -68,10 +71,10 @@ export function Project({ project }) {
               ))}
             </div>
 
-            {project.links.length > 0 && (
+            {project?.links && project?.links.length > 0 && (
               <div className="flex flex-wrap gap-2 items-center mb-4">
                 <span className="font-medium text-primary">Links:</span>
-                {displayLinks(project.links)}
+                {displayLinks(project?.links)}
               </div>
             )}
 

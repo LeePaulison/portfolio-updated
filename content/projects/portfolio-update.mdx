@@ -25,45 +25,94 @@ tags:
 
 <ProjectHero
   title='Portfolio Update'
-  subtitle='A full redesign of my portfolio using Next.js 16, MDX, Tailwind CSS, and Radix UI with a focus on accessibility and theming.'
+  subtitle='A full redesign of my portfolio using Next.js 15, MDX, Tailwind CSS, and Radix UI with a focus on accessibility and theming.'
 >
   <Overview>
-    <strong>Portfolio Update</strong> is a ground-up rebuild of my personal site, using modern frontend architecture to
-    improve performance, accessibility, and presentation.
+    <strong>Portfolio Update</strong> is a ground-up rebuild of my personal
+    website designed to better showcase projects, improve accessibility,
+    and create a more maintainable content workflow. The project combines
+    MDX-driven content, modern theming, and reusable UI components to
+    create a portfolio that can evolve alongside my work.
   </Overview>
 </ProjectHero>
 
-## Features
+## Why I Built It
 
-- MDX-based project content with dynamic layouts
-- Tailwind CSS v4 theming with `oklch` dark mode support
-- Accessibility-focused UI using Radix UI primitives
-- Custom scrollbar UX and enhanced scroll thumb feedback
-- Optimized Lighthouse scores and performance tuning
+My previous portfolio no longer reflected my current experience as a
+front-end developer or the quality of projects I wanted to showcase.
+The redesign focused on creating a faster, more accessible, and easier
+to maintain platform while improving the overall presentation of project
+case studies.
+
+The project also served as an opportunity to explore modern Next.js
+patterns, MDX-powered content authoring, and Tailwind CSS v4 theming.
+
+## Key Features
+
+- MDX-based project content with reusable layouts and components
+- Dynamic project pages powered by frontmatter metadata
+- Tailwind CSS v4 theming with dark mode support
+- Accessibility-focused UI built with Radix UI primitives
+- Responsive layouts optimized for desktop and mobile devices
+- Performance-focused architecture and Lighthouse optimization
 
 <TwoColumn>
-  <TechStack>
-    ## Tech Stack
-    - Next.js 15 App Router  
-    - Tailwind CSS v4  
-    - ShadCN + Radix UI Components  
-    - MDX for markdown/react hybrid content  
-    - Lighthouse scoring and UI performance  
-  </TechStack>
+  <div>
 
-  <ProjectImage
-    src="/assets/images/portfolio-update.png"
-    alt="Screenshot of Portfolio Update UI"
-  />
+  ## Design Challenges
+
+  Rebuilding the portfolio required balancing visual presentation,
+  maintainability, and accessibility.
+
+  - Creating reusable MDX components for project content
+  - Designing a consistent visual system across pages
+  - Implementing theme support with Tailwind CSS v4
+  - Maintaining accessibility across interactive components
+  - Building a content workflow that scales as projects are added
+
+  </div>
+
+  <div>
+
+  ## System Architecture
+
+  The portfolio is built using a content-driven architecture designed
+  to separate presentation from project content.
+
+  - Next.js App Router for routing and rendering
+  - MDX for project content and custom layouts
+  - Tailwind CSS v4 for styling and theming
+  - ShadCN and Radix UI for accessible UI components
+  - Static content generation for performance and SEO
+
+  The result is a lightweight platform that makes adding and maintaining
+  project content straightforward while preserving a consistent user
+  experience.
+
+  </div>
 </TwoColumn>
 
-## Goals
+## Lessons Learned
 
-- Demonstrate modern frontend best practices
-- Present projects using rich, markdown-friendly layouts
-- Improve accessibility and responsiveness across viewports
-- Enable future enhancements such as blog integration or CMS-backed content
+This project reinforced the value of content-driven architecture and
+component reuse. Building project pages with MDX significantly reduced
+the effort required to add new content while maintaining design
+consistency. The redesign also provided hands-on experience with
+Tailwind CSS v4, modern theming strategies, and accessibility-focused
+UI development.
+
+## Future Development
+
+Planned enhancements include:
+
+- Additional project case studies
+- Expanded project media galleries
+- Blog and article support
+- Enhanced search and content discovery
+- Continued accessibility and performance improvements
 
 <CTA>
-  <CTA.Link href='https://github.com/LeePaulison/portfolio-updated'>GitHub</CTA.Link>
+  <CTA.Link href='https://github.com/LeePaulison/portfolio-updated'>
+    GitHub
+  </CTA.Link>
 </CTA>

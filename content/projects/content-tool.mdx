@@ -1,0 +1,139 @@
+---
+
+id: content-tool
+title: Content Management & Revision Tracking Tool
+description: An internal enterprise application built to streamline content editing, revision tracking, and workflow management for training content teams.
+date: 2026-06-01
+status: Production
+technologies:
+  - React
+  - Redux Toolkit
+  - React Hook Form
+  - Yup
+  - Draft.js
+  - IndexedDB
+  - Material UI
+  - Tailwind CSS
+media:
+  url: content-tool-welcome
+  alt: Content Tool welcome page and file upload interface
+tags:
+  - React
+  - Enterprise Applications
+  - State Management
+  - Accessibility
+---
+
+<ProjectHero
+title="Content Management & Revision Tracking Tool"
+subtitle="An enterprise content management application designed to simplify editing, revision tracking, and workflow management for training content teams."
+
+>
+
+  <Overview>
+    <strong>Content Management & Revision Tracking Tool</strong> was developed
+    to streamline content editing workflows for training and instructional
+    design teams. The application centralizes content editing, revision
+    management, export generation, and workflow support into a single
+    interface, providing a more efficient and maintainable process for
+    managing large training programs.
+  </Overview>
+</ProjectHero>
+
+<ProjectImage
+src="/assets/images/content-tool-welcome.png"
+alt="Content Tool welcome page"
+/>
+
+## Why I Built It
+
+The Content Tool was created to address long-standing workflow
+challenges within a training content development environment. The need
+for a centralized editing and revision management system had been
+identified by stakeholders for several years, but existing workflows
+relied heavily on manual processes.
+
+Content updates, revision tracking, and reporting were handled through
+multiple disconnected steps that made large-scale content maintenance
+difficult and time-consuming.
+
+## Key Features
+
+- Schema-driven content editing
+- Revision tracking and audit history
+- Change comparison and review workflows
+- Automated revision report generation
+- Multilingual content support
+- Dynamic content structures and templates
+- Offline persistence and recovery
+- Rich text content editing
+- Content export and reporting tools
+
+<TwoColumn>
+  <div>
+
+    ## Design Challenges
+    
+    Building the Content Tool required solving several complex
+    state-management and data-modeling problems:
+    
+    - Translating generic CMS paths into readable change log labels
+    - Synchronizing React Hook Form and Redux state
+    - Tracking revisions across deeply nested content structures
+    - Detecting and reporting structural content changes across revisions
+    - Managing offline persistence with IndexedDB
+    - Generating human-readable revision reports
+    - Maintaining performance across large content documents
+
+  </div>
+
+  <div>
+
+    ## System Architecture
+    
+    The application is built around a schema-driven architecture that
+    separates content definitions from editing and presentation logic.
+    
+    - React for the user interface
+    - Redux Toolkit for application state management
+    - React Hook Form for content editing workflows
+    - Yup for schema validation
+    - IndexedDB for local persistence
+    - Draft.js for rich text editing
+    - Material UI and Tailwind CSS for the user interface
+    
+    The architecture centralizes template definitions, validation rules,
+    and workflow behavior, making new content templates easier to support
+    while preserving a consistent editing experience.
+
+  </div>
+</TwoColumn>
+
+## Lessons Learned
+
+Developing the Content Tool reinforced the importance of predictable
+state management when working with large, schema-driven applications.
+Implementing revision tracking required careful handling of nested data
+structures, dynamic form paths, and change detection logic across
+multiple layers of application state.
+
+The project also highlighted the challenge of making highly generic CMS
+data understandable in a revision report. The source content model was
+flexible enough to support many templates, but its raw structure did not
+provide meaningful labels for reviewers.
+
+To bridge that gap, the application introduced a dynamic labeling system
+for the change log. Label schemas defined how containers, arrays, and
+leaf nodes should be described, allowing revision reports to present
+technical content paths as readable, reviewer-friendly change summaries.
+
+## Future Development
+
+Potential future enhancements include:
+
+- Additional workflow automation
+- Expanded reporting capabilities
+- Enhanced content review processes
+- Improved collaboration features
+- Additional template and content type support
+- Deeper workflow analytics

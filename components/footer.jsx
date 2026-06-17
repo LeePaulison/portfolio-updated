@@ -9,18 +9,15 @@ export default function Footer() {
   return (
     <footer className="container grid grid-cols-12 gap-4 pb-4 pt-2 sm:pt-4 sm:pb-6">
       {/* Logo */}
-      <div className="col-span-3 flex flex-col items-start justify-center">
+      <div className="col-span-3 flex flex-row items-center justify-start gap-6">
         <Image
+          id="footer-logo"
           src="/assets/images/LP_Logo.webp"
           alt="Lee Paulison's Logo"
-          width={60}
-          height={60}
+          width={32}
+          height={32}
           priority
         />
-      </div>
-
-      {/* Social + Stack */}
-      <div className="col-span-6 flex flex-row items-center justify-center gap-8">
         {/* Social Icons */}
         <a
           href="https://github.com/LeePaulison"
@@ -42,7 +39,10 @@ export default function Footer() {
             aria-label="LinkedIn Icon"
           />
         </a>
+      </div>
 
+      {/* Social + Stack */}
+      <div className="col-span-6 flex flex-row items-center justify-between gap-8">
         {/* Tech Stack */}
         <div className="flex items-center">
           <p className="text-xs text-muted-foreground text-center italic hidden sm:block mb-1">

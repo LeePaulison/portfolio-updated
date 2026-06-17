@@ -29,63 +29,97 @@ tags:
 ---
 
 <ProjectHero
-title="Saigely"
-subtitle="A real-time AI chat platform built with Next.js, GraphQL, WebSockets, and OpenAI."
-
+  title="Saigely"
+  subtitle="A real-time AI chat platform built with Next.js, GraphQL, WebSockets, and OpenAI."
 >
   <Overview>
-    <strong>Saigely</strong> is a full-stack portfolio project focused on
-    real-time AI interaction, authentication, and conversation management.
-    The application streams AI responses over WebSockets, persists chat
-    history, and demonstrates modern full-stack architecture using a
-    streamlined Next.js-based runtime.
+    <strong>Saigely</strong> is a full-stack AI application built to explore
+    how modern chat platforms can be implemented within a unified Next.js
+    runtime. The project combines authentication, real-time response
+    streaming, persistent conversations, and GraphQL APIs into a single
+    application while maintaining a scalable architecture for future growth.
   </Overview>
 </ProjectHero>
 
-## Features
+<ProjectImage
+  src="/assets/images/placeholder-image.png"
+  alt="Placeholder Image until UI is sufficiently developed"
+/>
 
-  - Real-time AI response streaming with OpenAI
-  - WebSocket-based chat communication
-  - GitHub and Google authentication powered by Better Auth
-  - GraphQL API built with GraphQL Yoga
-  - Persistent conversation history stored in MongoDB
-  - Server-side rendering with Next.js App Router
-  - Modular architecture designed for future integrations and expansion
+## Why I Built It
+
+Many AI applications separate authentication, APIs, real-time
+communication, and persistence into multiple services. Saigely was built
+to explore a simpler architecture that combines these concerns into a
+single application while still supporting real-time AI interaction and
+long-term maintainability.
+
+The project serves as a practical environment for experimenting with
+modern full-stack patterns including GraphQL, WebSockets, authentication,
+and AI integrations.
+
+## Key Features
+
+- Stream AI responses in real time using OpenAI and WebSockets
+- Persist conversations in MongoDB for long-term history
+- Authenticate users through GitHub and Google providers
+- Expose application data through a GraphQL API
+- Support server-side rendering through Next.js App Router
+- Maintain a modular architecture designed for future expansion
 
 <TwoColumn>
-  <TechStack>
-    ## Tech Stack
-    - Next.js 15 App Router
-    - GraphQL Yoga
-    - Better Auth
-    - MongoDB Atlas
-    - OpenAI API
-    - WebSockets
-    - Tailwind CSS
-    - Radix UI
-  </TechStack>
+  <div>
 
-  <ProjectImage
-  src="/assets/images/placeholder-image.png"
-  alt="Screenshot of the Saigely chat interface"
-  /> 
+  ## Architecture Challenges
+
+  Building Saigely required solving several common problems found in
+  modern AI applications:
+
+  - Real-time token streaming over WebSockets
+  - Authentication and session management
+  - Conversation persistence and retrieval
+  - GraphQL API design
+  - Managing a unified Next.js runtime
+
+  </div>
+
+  <div>
+  
+  ## System Architecture
+  
+  Saigely combines several modern application concerns into a single
+  Next.js runtime:
+  
+  - Next.js App Router for the frontend and server runtime
+  - Better Auth for authentication and session management
+  - GraphQL Yoga for API access
+  - WebSockets for real-time AI streaming
+  - MongoDB Atlas for conversation persistence
+  - OpenAI for conversational AI capabilities
+  
+  The goal is to maintain a clean, scalable architecture while avoiding
+  the complexity of multiple backend services.
+  
+  </div>
 </TwoColumn>
 
-## Goals
+## Lessons Learned
 
-- Demonstrate full-stack application architecture using Next.js
-- Showcase real-time AI streaming with WebSockets and OpenAI
-- Explore scalable authentication and conversation management patterns
-- Serve as a practical portfolio project highlighting modern web development skills
-- Provide a foundation for future features including exports, collaboration, and analytics
+Saigely has provided hands-on experience designing real-time systems,
+managing authenticated user workflows, and integrating AI services into
+a modern web application. The project reinforced the importance of
+clear API boundaries, modular architecture, and predictable data flow
+when building applications expected to grow over time.
 
-## Current Focus
+## Future Development
 
-Saigely is currently under active development with work centered on
-authentication, conversation persistence, GraphQL integration, and
-real-time AI streaming. Future enhancements include conversation export,
-team collaboration features, usage tracking, and additional productivity
-tools built on top of the core chat platform.
+Planned enhancements include:
+
+- Conversation export capabilities
+- Workspace and collaboration features
+- Usage analytics and reporting
+- Expanded AI workflows
+- Additional productivity tools built on the core platform
 
 <CTA>
   <CTA.Link href="https://github.com/LeePaulison/saigely">

@@ -1,5 +1,5 @@
-@import 'tailwindcss';
-@import 'tw-animate-css';
+@import "tailwindcss";
+@import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 @tailwind utilities;
@@ -45,65 +45,65 @@
 }
 
 :root {
-  --background: oklch(0.98 0.005 250); /* ≈ slate-50 */
-  --foreground: oklch(0.22 0.01 250); /* ≈ slate-900 */
+  --background: var(--color-slate-50);
+  --foreground: var(--color-slate-900);
 
-  --card: oklch(0.96 0.005 250); /* ≈ slate-100 */
-  --card-foreground: var(--foreground);
-
-  --popover: var(--background);
-  --popover-foreground: var(--foreground);
-
-  --primary: oklch(0.72 0.25 45); /* your vivid orange (keep as-is) */
-  --primary-foreground: oklch(0.98 0.01 45);
-
-  --secondary: oklch(0.96 0.04 45);
-  --secondary-foreground: var(--foreground);
-
-  --muted: oklch(0.93 0.02 250);
-  --muted-foreground: oklch(0.5 0.05 250);
-
-  --accent: oklch(0.82 0.18 45);
-  --accent-foreground: oklch(0.15 0.02 45);
-
-  --destructive: oklch(0.65 0.25 27);
-  --destructive-foreground: oklch(0.99 0.01 45);
-
-  --border: oklch(0.85 0.01 250);
-  --input: var(--border);
-  --ring: oklch(0.7 0.1 250);
-
-  --radius: 0.625rem;
-}
-
-.dark {
-  --background: oklch(0.16 0.01 250); /* ≈ slate-900 */
-  --foreground: oklch(0.97 0.01 250); /* ≈ slate-50 */
-
-  --card: oklch(0.22 0.01 250); /* ≈ slate-800 */
+  --card: var(--color-white);
   --card-foreground: var(--foreground);
 
   --popover: var(--card);
   --popover-foreground: var(--foreground);
 
-  --primary: oklch(0.75 0.2 45);
-  --primary-foreground: oklch(0.1 0.01 45);
+  --primary: var(--color-orange-700);
+  --primary-foreground: var(--color-white);
 
-  --secondary: oklch(0.3 0.02 250);
+  --secondary: var(--color-orange-100);
   --secondary-foreground: var(--foreground);
 
-  --muted: oklch(0.25 0.01 250);
-  --muted-foreground: oklch(0.7 0.03 250);
+  --muted: var(--color-slate-100);
+  --muted-foreground: var(--color-slate-500);
 
-  --accent: oklch(0.65 0.18 45);
-  --accent-foreground: oklch(0.98 0.01 45);
+  --accent: var(--color-orange-600);
+  --accent-foreground: var(--color-white);
 
-  --destructive: oklch(0.7 0.22 27);
+  --destructive: var(--color-red-600);
+  --destructive-foreground: var(--color-white);
+
+  --border: var(--color-slate-300);
+  --input: var(--color-slate-200);
+  --ring: var(--color-orange-500);
+
+  --radius: 0.625rem;
+}
+
+.dark {
+  --background: var(--color-slate-900);
+  --foreground: var(--color-slate-50);
+
+  --card: var(--color-slate-800);
+  --card-foreground: var(--foreground);
+
+  --popover: var(--card);
+  --popover-foreground: var(--foreground);
+
+  --primary: var(--color-orange-500);
+  --primary-foreground: var(--color-slate-950);
+
+  --secondary: var(--color-slate-700);
+  --secondary-foreground: var(--foreground);
+
+  --muted: var(--color-slate-800);
+  --muted-foreground: var(--color-slate-400);
+
+  --accent: var(--color-orange-500);
+  --accent-foreground: var(--color-slate-950);
+
+  --destructive: var(--color-red-500);
   --destructive-foreground: var(--foreground);
 
-  --border: oklch(0.25 0.01 250);
-  --input: oklch(0.3 0.01 250);
-  --ring: oklch(0.6 0.1 250);
+  --border: var(--color-slate-700);
+  --input: var(--color-slate-700);
+  --ring: var(--color-orange-500);
 }
 
 @layer base {
