@@ -2,14 +2,21 @@ import { getMDXPage } from "@/lib/get-mdx-page";
 import SetBreadcrumbs from "@/components/setBreadcrumbs";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { MDXComponents } from "@/components/mdxComponents";
+import { notFound } from "next/navigation";
 
 export default async function ProjectPage({ params }) {
   const { slug } = await params;
 
-  const { frontmatter, content } = await getMDXPage({
+  const page = await getMDXPage({
     type: "projects",
     slug,
   });
+
+  if (!page) {
+    notFound();
+  }
+
+  const { frontmatter, content } = page;
 
   const pageTitle =
     frontmatter.title ||

@@ -13,7 +13,7 @@ CTA.Link = function CTALink({ href, children, variant = "default" }) {
     <Button
       asChild
       variant={variant}
-      className="text-base"
+      className="CTA-Link text-base !text-primary-foreground !no-underline hover:!text-primary-foreground"
     >
       <a href={href} target="_blank" rel="noopener noreferrer">
         {children}

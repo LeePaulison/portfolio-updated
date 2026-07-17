@@ -47,7 +47,7 @@ export function AboutTeaser() {
 
             <a
               href="/about"
-              className="inline-block px-5 py-2 text-sm font-medium rounded-xl border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+              className="inline-block px-5 py-2 text-sm font-medium rounded-xl border border-accent text-primary hover:bg-accent hover:text-accent-foreground transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
             >
               Learn My Story{" "}
             </a>

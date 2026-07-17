@@ -79,7 +79,7 @@ export default function AboutPage() {
       </p>
 
       <a
-        href="/Lee_Paulison_Front_End_Developer_Resume.pdf"
+        href="/Lee_Paulison_Jr_Front_End_Developer_Resume.pdf"
         target="_blank"
         rel="noopener noreferrer"
         className="inline-block mt-4 px-5 py-2 text-sm font-medium rounded-xl border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"

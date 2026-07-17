@@ -14,7 +14,7 @@ export function ContactTeaser() {
               Whether you have a project in mind or just want to say hello, I'm just a click away.
             </p>
             <Button asChild>
-              <a href="/contact">Get in Touch</a>
+              <a href="/contact" className="font-semibold">Get in Touch</a>
             </Button>
           </CardContent>
         </Card>

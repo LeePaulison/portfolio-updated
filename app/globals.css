@@ -54,16 +54,16 @@
   --popover: var(--card);
   --popover-foreground: var(--foreground);
 
-  --primary: var(--color-orange-700);
+  --primary: oklch(0.44 0.03 115);
   --primary-foreground: var(--color-white);
 
-  --secondary: var(--color-orange-100);
+  --secondary: oklch(0.95 0.015 115);
   --secondary-foreground: var(--foreground);
 
   --muted: var(--color-slate-100);
   --muted-foreground: var(--color-slate-500);
 
-  --accent: var(--color-orange-600);
+  --accent: oklch(0.7 0.025 115);
   --accent-foreground: var(--color-white);
 
   --destructive: var(--color-red-600);
@@ -71,7 +71,7 @@
 
   --border: var(--color-slate-300);
   --input: var(--color-slate-200);
-  --ring: var(--color-orange-500);
+  --ring: oklch(0.56 0.03 115);
 
   --radius: 0.625rem;
 }
@@ -86,7 +86,7 @@
   --popover: var(--card);
   --popover-foreground: var(--foreground);
 
-  --primary: var(--color-orange-500);
+  --primary: oklch(0.76 0.025 115);
   --primary-foreground: var(--color-slate-950);
 
   --secondary: var(--color-slate-700);
@@ -95,7 +95,7 @@
   --muted: var(--color-slate-800);
   --muted-foreground: var(--color-slate-400);
 
-  --accent: var(--color-orange-500);
+  --accent: oklch(0.8 0.02 115);
   --accent-foreground: var(--color-slate-950);
 
   --destructive: var(--color-red-500);
@@ -103,7 +103,7 @@
 
   --border: var(--color-slate-700);
   --input: var(--color-slate-700);
-  --ring: var(--color-orange-500);
+  --ring: oklch(0.8 0.02 115);
 }
 
 @layer base {
@@ -121,7 +121,7 @@
   }
 
   .prose {
-    color: oklch(var(--foreground));
+    color: var(--foreground);
     font-size: 1rem;
     line-height: 1.75;
     word-break: break-word;
@@ -129,22 +129,22 @@
 
   .prose h1 {
     font-size: 2rem;
-    font-weight: 700;
-    color: oklch(var(--foreground));
+    font-weight: 800;
+    color: var(--foreground);
     margin: 2rem 0 1.25rem;
   }
 
   .prose h2 {
     font-size: 1.5rem;
-    font-weight: 600;
-    color: oklch(var(--foreground));
+    font-weight: 700;
+    color: var(--foreground);
     margin: 1.75rem 0 1rem;
   }
 
   .prose h3 {
     font-size: 1.25rem;
-    font-weight: 600;
-    color: oklch(var(--foreground));
+    font-weight: 700;
+    color: var(--foreground);
     margin: 1.5rem 0 0.75rem;
   }
 
@@ -172,15 +172,15 @@
   }
 
   .prose blockquote {
-    border-left: 4px solid oklch(var(--muted-foreground));
+    border-left: 4px solid var(--muted-foreground);
     padding-left: 1rem;
-    color: oklch(var(--muted-foreground));
+    color: var(--muted-foreground);
     font-style: italic;
     margin: 1.5rem 0;
   }
 
   .prose a {
-    color: oklch(var(--primary));
+    color: var(--primary);
     text-decoration: underline;
     text-underline-offset: 2px;
     font-weight: 500;
@@ -191,7 +191,7 @@
   }
 
   .prose code {
-    background-color: oklch(var(--muted) / 0.25);
+    background-color: var(--muted);
     padding: 0.2rem 0.4rem;
     border-radius: 4px;
     font-size: 0.95em;
@@ -199,8 +199,8 @@
   }
 
   .prose pre {
-    background-color: oklch(var(--muted) / 1);
-    color: oklch(var(--foreground) / 1);
+    background-color: var(--muted);
+    color: var(--foreground);
     padding: 1rem;
     border-radius: 0.5rem;
     overflow-x: auto;
@@ -208,15 +208,19 @@
   }
 
   .dark .prose {
-    color: oklch(var(--foreground));
+    color: var(--foreground);
   }
 
   .dark .prose blockquote {
-    border-left-color: oklch(var(--muted-foreground));
-    color: oklch(var(--muted-foreground));
+    border-left-color: var(--muted-foreground);
+    color: var(--muted-foreground);
   }
 
   .dark .prose a {
-    color: oklch(var(--primary));
+    color: var(--primary);
   }
+}
+
+.CTA-Link p {
+  margin-bottom: 0;
 }
