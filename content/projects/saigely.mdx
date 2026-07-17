@@ -1,5 +1,4 @@
 ---
-
 id: saigely
 title: Saigely
 description: An AI-powered chat platform built with Next.js, GraphQL, WebSockets, and OpenAI.
@@ -15,17 +14,17 @@ technologies:
   - Tailwind CSS
   - Radix UI
 media:
-  url: placeholder-image
-  alt: Screenshot of the Saigely chat interface
+  url: saigely-workspace-dark-1600x900
+  alt: Saigely workspace dashboard with conversation list and active chat panel
 links:
-- type: GitHub
-  url: https://github.com/LeePaulison/saigely
+  - type: GitHub
+    url: https://github.com/LeePaulison/saigely
 tags:
-- Next.js
-- GraphQL
-- OpenAI
-- WebSockets
-- AI
+  - Next.js
+  - GraphQL
+  - OpenAI
+  - WebSockets
+  - AI
 ---
 
 <ProjectHero
@@ -33,93 +32,134 @@ tags:
   subtitle="A real-time AI chat platform built with Next.js, GraphQL, WebSockets, and OpenAI."
 >
   <Overview>
-    <strong>Saigely</strong> is a full-stack AI application built to explore
-    how modern chat platforms can be implemented within a unified Next.js
-    runtime. The project combines authentication, real-time response
-    streaming, persistent conversations, and GraphQL APIs into a single
-    application while maintaining a scalable architecture for future growth.
+    <strong>Saigely</strong> is an AI chat platform that brings together
+    authentication, real-time conversation streaming, persistent chat
+    history, and GraphQL-backed data access in a single Next.js
+    application. The goal is to explore how a modern chat product can
+    stay responsive, organized, and maintainable without splitting core
+    product concerns across separate services.
   </Overview>
 </ProjectHero>
 
 <ProjectImage
-  src="/assets/images/placeholder-image.png"
-  alt="Placeholder Image until UI is sufficiently developed"
+  src="/assets/images/saigely-workspace-dark-1600x900.png"
+  alt="Saigely workspace dashboard with conversation list and active chat panel"
 />
 
 ## Why I Built It
 
-Many AI applications separate authentication, APIs, real-time
-communication, and persistence into multiple services. Saigely was built
-to explore a simpler architecture that combines these concerns into a
-single application while still supporting real-time AI interaction and
-long-term maintainability.
+Saigely started as an exploration of how far a unified Next.js runtime
+could go when paired with modern AI and real-time infrastructure. A lot
+of chat applications spread authentication, persistence, API logic, and
+streaming behavior across multiple systems. That can work, but it also
+adds coordination overhead and makes iteration harder.
 
-The project serves as a practical environment for experimenting with
-modern full-stack patterns including GraphQL, WebSockets, authentication,
-and AI integrations.
+I wanted to build a product that treated those concerns as part of one
+cohesive experience instead of separate problems. The result is a
+workspace-focused chat platform that is intentionally structured for
+growth, but still small enough to stay understandable while the product
+is evolving.
 
 ## Key Features
 
-- Stream AI responses in real time using OpenAI and WebSockets
-- Persist conversations in MongoDB for long-term history
-- Authenticate users through GitHub and Google providers
-- Expose application data through a GraphQL API
-- Support server-side rendering through Next.js App Router
-- Maintain a modular architecture designed for future expansion
+- Real-time AI response streaming over WebSockets
+- GraphQL API layer for chat, workspace, and user data
+- Better Auth for GitHub and Google sign-in flows
+- MongoDB persistence for conversations and user data
+- Workspace-oriented UI for browsing and resuming chats
+- Settings and account controls built for future expansion
+- Responsive interface designed for both desktop and mobile layouts
 
 <TwoColumn>
   <div>
 
-  ## Architecture Challenges
+    ## Interface Flow
 
-  Building Saigely required solving several common problems found in
-  modern AI applications:
+    Saigely is designed around the idea that users should be able to
+    move from sign-in to conversation without friction.
 
-  - Real-time token streaming over WebSockets
-  - Authentication and session management
-  - Conversation persistence and retrieval
-  - GraphQL API design
-  - Managing a unified Next.js runtime
+    - Login and workspace entry are kept lightweight
+    - Conversations are organized so active chats are easy to resume
+    - The main chat area stays focused on the current response stream
+    - Settings are separated from the core chat flow so the interface
+      stays uncluttered
+
+    The current UI is intentionally simple while the product foundation
+    is still being shaped, but the structure is already aimed at a more
+    complete workspace experience.
 
   </div>
 
   <div>
-  
-  ## System Architecture
-  
-  Saigely combines several modern application concerns into a single
-  Next.js runtime:
-  
-  - Next.js App Router for the frontend and server runtime
-  - Better Auth for authentication and session management
-  - GraphQL Yoga for API access
-  - WebSockets for real-time AI streaming
-  - MongoDB Atlas for conversation persistence
-  - OpenAI for conversational AI capabilities
-  
-  The goal is to maintain a clean, scalable architecture while avoiding
-  the complexity of multiple backend services.
-  
+
+    ## System Architecture
+
+    Saigely combines several moving pieces into one application layer:
+
+    - Next.js App Router for rendering and server logic
+    - GraphQL Yoga for the API surface
+    - Better Auth for session handling and provider sign-in
+    - WebSockets for live AI streaming
+    - MongoDB for persistent storage
+    - OpenAI for the conversational model layer
+
+    The architecture is built to keep the product modular without making
+    the codebase feel fragmented. That balance matters for an app like
+    this, where chat state, identity, and generated output all need to
+    stay in sync.
+
+  </div>
+</TwoColumn>
+
+<TwoColumn>
+  <div>
+    <ProjectImage
+      src="/assets/images/saigely-login-dark-1600x900.png"
+      alt="Saigely login screen in dark mode"
+    />
+  </div>
+
+  <div>
+    <ProjectImage
+      src="/assets/images/saigely-code-response-dark-1600x900.png"
+      alt="Saigely chat response screen showing a code-oriented assistant reply"
+    />
+  </div>
+</TwoColumn>
+
+<TwoColumn>
+  <div>
+    <ProjectImage
+      src="/assets/images/saigely-settings-dark-1600x900.png"
+      alt="Saigely settings screen in dark mode"
+    />
   </div>
 </TwoColumn>
 
 ## Lessons Learned
 
-Saigely has provided hands-on experience designing real-time systems,
-managing authenticated user workflows, and integrating AI services into
-a modern web application. The project reinforced the importance of
-clear API boundaries, modular architecture, and predictable data flow
-when building applications expected to grow over time.
+Working on Saigely has been a useful exercise in balancing product scope
+with technical structure. Real-time AI features are easy to make flashy,
+but much harder to make predictable and maintainable. The biggest lesson
+so far has been that the experience only feels good when the underlying
+data flow stays clear.
+
+The project also reinforced the value of separating concerns early.
+Authentication, persistence, API design, and response streaming all
+need to work together, but they should not blur into one another. Keeping
+those boundaries explicit makes the app easier to extend as the feature
+set grows.
 
 ## Future Development
 
-Planned enhancements include:
+Planned work includes:
 
-- Conversation export capabilities
-- Workspace and collaboration features
+- Conversation export and sharing
+- Workspace collaboration features
+- Smarter conversation organization and search
 - Usage analytics and reporting
-- Expanded AI workflows
-- Additional productivity tools built on the core platform
+- Expanded AI workflow tools
+- More polished onboarding and account settings
 
 <CTA>
   <CTA.Link href="https://github.com/LeePaulison/saigely">
